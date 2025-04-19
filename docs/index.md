@@ -23,23 +23,22 @@ title: Projects
     text-decoration: none;
     color: inherit;
     background: white;
-    padding: 0;  /* Remove padding around the card */
   }
 
   .card img {
     width: 100%;
-    height: 100%;  /* Make the image fill the entire height of the card */
-    object-fit: cover;  /* Ensure the image covers the area without distortion */
-    margin: 0;  /* No space between image and the tile */
+    height: 250px;  /* Fixed height for consistency */
+    object-fit: cover;  /* Crop image to cover the area, centered */
+    background: #f8f8f8;
   }
 
   .card .content {
-    padding: 0.75rem 1rem;  /* Smaller padding to reduce spacing */
+    padding: 0.75rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
-    justify-content: space-between;  /* Push title and description towards top */
+    justify-content: space-between;
   }
 
   .card .title {
