@@ -1,9 +1,15 @@
-- title: Rex on the Run
-  image: /assets/rotr.png
-  url: /static/rotr/index.html
-  description: A simple splitscren platformer I wrote to learn Godot.  And to play with my kids.
 
 - title: Minecraft Mods
   image: /assets/grassblock.jpg
   url: https://modrinth.com/user/pcal43
   description: Assorted minecraft mods I've written
+
+- title: Rex on the Run
+  image: /assets/rotr.png
+  url: /static/rotr/index.html
+  description: A simple splitscren platformer I wrote to learn Godot.  And to play with my kids.
+
+- title: Textorio
+  image: /assets/textorio.png
+  url: https://www.lexaloffle.com/bbs/?tid=141135
+  description: An automation puzzler I wrote to learn Pico-8.
