@@ -26,7 +26,7 @@ title: Projects
   }
 
   .card img {
-    width: 100%;
+    width: 350px;
     height: 350px;  /* Fixed height for consistency */
     object-fit: cover;  /* Crop image to cover the area, centered */
     background: #f8f8f8;
