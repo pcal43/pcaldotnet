@@ -1,6 +1,6 @@
 - title: Rex on the Run
   image: /assets/rotr.png
-  url: https://example.com/dino-dash
+  url: /static/rotr/index.html
   description: A simple splitscren platformer I wrote to learn Godot.  And to play with my kids.
 
 - title: Minecraft Mods
