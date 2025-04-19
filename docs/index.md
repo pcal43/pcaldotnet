@@ -29,6 +29,11 @@ title: Projects
     padding: 1rem;
     font-size: 1.2rem;
   }
+  .card .description {
+    text-style: italic;
+    padding: 1rem;
+    font-size: 1rem;
+  }
   .card:hover {
     transform: translateY(-5px);
   }
@@ -38,7 +43,10 @@ title: Projects
   {% for project in site.data.projects %}
     <a href="{{ project.url }}" class="card">
       <img src="{{ project.image }}" alt="{{ project.title }}">
-      <div class="title">{{ project.title }}</div>
+      <div class="title">{{ project.title }} </div>
+      <div class="description">{{ project.description }} </div>
+            
+
     </a>
   {% endfor %}
 </div>
