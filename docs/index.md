@@ -10,8 +10,12 @@ title: Projects
     gap: 1.5rem;
     padding: 2rem 0;
   }
+
   .card {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
@@ -19,21 +23,36 @@ title: Projects
     text-align: center;
     text-decoration: none;
     color: inherit;
+    background: white;
   }
+
   .card img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 180px;
+    object-fit: cover;
   }
+
+  .card .content {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .card .title {
-    padding: 1rem;
     font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
   }
+
   .card .description {
-    text-style: italic;
-    padding: 1rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #555;
+    margin-top: auto;
   }
+
   .card:hover {
     transform: translateY(-5px);
   }
@@ -43,10 +62,10 @@ title: Projects
   {% for project in site.data.projects %}
     <a href="{{ project.url }}" class="card">
       <img src="{{ project.image }}" alt="{{ project.title }}">
-      <div class="title">{{ project.title }} </div>
-      <div class="description">{{ project.description }} </div>
-            
-
+      <div class="content">
+        <div class="title">{{ project.title }}</div>
+        <div class="description">{{ project.description }}</div>
+      </div>
     </a>
   {% endfor %}
 </div>
