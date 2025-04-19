@@ -7,4 +7,4 @@ plugins:
 
 minima:
   include_css:
-    - /assets/css/custom.css
+    - assets/css/custom.css
