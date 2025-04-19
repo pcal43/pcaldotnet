@@ -43,3 +43,29 @@ title: Projects
   .card .title {
     font-size: 1.2rem;
     font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .card .description {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #555;
+    margin: 0;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+</style>
+
+<div class="grid">
+  {% for project in site.data.projects %}
+    <a href="{{ project.url }}" class="card">
+      <img src="{{ project.image }}" alt="{{ project.title }}">
+      <div class="content">
+        <div class="title">{{ project.title }}</div>
+        <div class="description">{{ project.description }}</div>
+      </div>
+    </a>
+  {% endfor %}
+</div>
