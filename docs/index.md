@@ -14,7 +14,6 @@ title: Projects
   .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
     border-radius: 10px;
     overflow: hidden;
@@ -28,44 +27,19 @@ title: Projects
 
   .card img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    height: auto; /* preserve aspect ratio */
+    aspect-ratio: 1 / 1; /* enforces square if browser supports it */
+    object-fit: contain; /* don’t crop square images */
+    background: #f8f8f8;
   }
 
   .card .content {
     padding: 1rem;
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
   }
 
   .card .title {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-
-  .card .description {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: #555;
-    margin-top: auto;
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
-  }
-</style>
-
-<div class="grid">
-  {% for project in site.data.projects %}
-    <a href="{{ project.url }}" class="card">
-      <img src="{{ project.image }}" alt="{{ project.title }}">
-      <div class="content">
-        <div class="title">{{ project.title }}</div>
-        <div class="description">{{ project.description }}</div>
-      </div>
-    </a>
-  {% endfor %}
-</div>
