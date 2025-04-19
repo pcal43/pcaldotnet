@@ -1,6 +1,8 @@
 title: pcal.net
 theme: minima
 nav: []
+include_css:
+  - /assets/css/custom.css
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
