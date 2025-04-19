@@ -1,5 +1,6 @@
 title: pcal.net
 theme: minima
+nav: []
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
