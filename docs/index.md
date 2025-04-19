@@ -51,7 +51,7 @@ title: Projects
   .card .description {
     font-size: 0.9rem;
     font-style: italic;
-    height: 120px;
+    height: 80px;
     color: #555;
     margin: 0;
   }
