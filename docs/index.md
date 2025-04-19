@@ -27,9 +27,8 @@ title: Projects
 
   .card img {
     width: 100%;
-    height: auto; /* preserve aspect ratio */
-    aspect-ratio: 1 / 1; /* enforces square if browser supports it */
-    object-fit: contain; /* don’t crop square images */
+    height: 250px;  /* Fixed height */
+    object-fit: contain;  /* Ensures square image stays contained */
     background: #f8f8f8;
   }
 
