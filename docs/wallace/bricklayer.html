@@ -22,6 +22,8 @@
 			background: #000;
 			position: relative;
 			overflow: hidden;
+			padding-left: 16px;
+			padding-right: 16px;
 		}
 		/* Custom CRT scrollbar */
 		.crt::-webkit-scrollbar {
@@ -42,9 +44,9 @@
 		}
 		/* Firefox */
 		.crt {
-			width: auto;
+			width: 100%;
+			max-width: 80ch;
 			min-width: unset;
-			max-width: unset;
 			max-height: 80vh;
 			padding: 24px;
 			background: transparent;
@@ -60,7 +62,7 @@
 			box-shadow: 0 0 20px 2px #00ff41aa, 0 0 0 8px #003300 inset;
 			overflow: hidden;
 			margin: auto;
-			display: flex;
+			display: block;
 			flex-direction: column;
 			align-items: stretch;
 			justify-content: flex-start;
@@ -119,8 +121,6 @@
 			overflow-x: hidden;
 			height: 100%;
 			max-height: calc(80vh - 48px); /* 24px top + 24px bottom padding for CRT border */
-			padding-top: 24px;
-			padding-bottom: 24px;
 			/* visually shortens the scrollbar so it doesn't overlap the rounded corners */
 		}
 		.crt-scroll::-webkit-scrollbar {
@@ -154,66 +154,36 @@
 		<div class="crt-scanlines"></div>
 		<div class="crt-scanband"></div>
 		<div class="crt-scroll">
-			<pre>FROM INTERNAL INTERLACE-SYSTEM E-MAIL MEMO
+			<div class="crt-content">
+				   <p>FROM INTERNAL INTERLACE-SYSTEM E-MAIL MEMO</p>
 
-CAH-NNE22-3575634-22, CLAIMS ADJUSTMENT HEADQUARTERS, STATE FARM INSURANCE COMPANIES,
-INC., BLOOMINGTON IL 26 JUNE
-YEAR OF DAIRY PRODUCTS FROM THE AMERICAN HEARTLAND
-FROM: murrayf @clmshqnne22.626INTCOM
-TO: powellg/sanchezm/parryk @ clmhqnne.626INTCOM
-MESSAGE: guys,
-get a load, my def. of a bad day. metro boston region 22 this spring, comp claim,
-witnesses deposed by boston wrkmans comp. establish claimant Impaired and the emerg.
-room rept. lists a blood-alcohol of .3+, so be pleased to know we're clear on the
-357-5 liability end. but basic facts below confirmed by witnesses and CYD accident
-rept. here's just the first page, get a load:
+				   <p>CAH-NNE22-3575634-22, CLAIMS ADJUSTMENT HEADQUARTERS, STATE FARM INSURANCE COMPANIES, INC., BLOOMINGTON IL 26 JUNE<br>
+				   YEAR OF DAIRY PRODUCTS FROM THE AMERICAN HEARTLAND<br>
+				   FROM: murrayf @clmshqnne22.626INTCOM<br>
+				   TO: powellg/sanchezm/parryk @ clmhqnne.626INTCOM<br>
+				   MESSAGE: guys,<br>
+				   get a load, my def. of a bad day. metro boston region 22 this spring, comp claim, witnesses deposed by boston wrkmans comp. establish claimant Impaired and the emerg. room rept. lists a blood-alcohol of .3+, so be pleased to know we're clear on the 357-5 liability end. but basic facts below confirmed by witnesses and CYD accident rept. here's just the first page, get a load:</p>
 
-murrayf ©clmshqnne22.626INTCOM 626YDPAH0112317/p. 1
-Dwayne R. Glynn 1 76N. Faneuil Blvd. Stoneham, Mass. 021808754/4 June 21, YODPFTAH
-Workmans Accident Claims Office State Farm Insurance 1 State Farm Plaza Normal, III.
-617062262/6
+				   <p>murrayf ©clmshqnne22.626INTCOM 626YDPAH0112317/p. 1<br>
+				   Dwayne R. Glynn 1 76N. Faneuil Blvd. Stoneham, Mass. 021808754/4 June 21, YODPFTAH<br>
+				   Workmans Accident Claims Office State Farm Insurance 1 State Farm Plaza Normal, III. 617062262/6</p>
 
-Dear Sir:
+				   <p>Dear Sir:</p>
 
-I am writing in response to your request for additional information. In block #3 of
-the accident reporting form, I put "trying to do the job alone", as the cause of my
-accident. You said in your letter that I should explain more fully and I trust that
-the following details will be sufficient.
+				   <p>I am writing in response to your request for additional information. In block #3 of the accident reporting form, I put "trying to do the job alone", as the cause of my accident. You said in your letter that I should explain more fully and I trust that the following details will be sufficient.</p>
 
-I am a bricklayer by trade. On the day of the accident, March 27, I was working
-alone on the roof of a new six story building. When I completed my work, I
-discovered that I had about 900 kg. of brick left over. Rather than laboriously
-carry the bricks down by hand, I decided to lower them in a barrel by using a
-pulley which fortunately was attached to the side of the building at the sixth
-floor. Securing the rope at ground level, I went up to the roof, swung the barrel
-out and loaded the brick into it. Then I went back to the ground and untied the
-rope, holding it tightly to insure a slow descent of the 900 kg of bricks. You will
-note in block #11 of the accident reporting form that I weigh 75 kg.
+				   <p>I am a bricklayer by trade. On the day of the accident, March 27, I was working alone on the roof of a new six story building. When I completed my work, I discovered that I had about 900 kg. of brick left over. Rather than laboriously carry the bricks down by hand, I decided to lower them in a barrel by using a pulley which fortunately was attached to the side of the building at the sixth floor. Securing the rope at ground level, I went up to the roof, swung the barrel out and loaded the brick into it. Then I went back to the ground and untied the rope, holding it tightly to insure a slow descent of the 900 kg of bricks. You will note in block #11 of the accident reporting form that I weigh 75 kg.</p>
 
-Due to my surprise at being jerked off the ground so suddenly, I lost my presence
-of mind and forgot to let go of the rope. Needless to say, I proceeded at a rapid
-rate up the side of the building. In the vicinity of the third floor I met the
-barrel coming down. This explains the fractured skull and the broken collar bone.
+				   <p>Due to my surprise at being jerked off the ground so suddenly, I lost my presence of mind and forgot to let go of the rope. Needless to say, I proceeded at a rapid rate up the side of the building. In the vicinity of the third floor I met the barrel coming down. This explains the fractured skull and the broken collar bone.</p>
 
-Slowed only slightly, I continued my rapid ascent not stopping until the fingers of
-my right hand were two knuckles deep into the pulleys. Fortunately, by this time, I
-had regained my presence of mind, and was able to hold tightly to the rope in spite
-of considerable pain. At approximately the same time, however, the barrel of bricks
-hit the ground and the bottom fell out of the barrel from the force of hitting the
-ground.
+				   <p>Slowed only slightly, I continued my rapid ascent not stopping until the fingers of my right hand were two knuckles deep into the pulleys. Fortunately, by this time, I had regained my presence of mind, and was able to hold tightly to the rope in spite of considerable pain. At approximately the same time, however, the barrel of bricks hit the ground and the bottom fell out of the barrel from the force of hitting the ground.</p>
 
-Devoid of the weight of the bricks, the barrel now weighed approximately 30 kg. I
-refer you again to my weight of 75 kg in block #11. As you could imagine, still
-holding the rope, I began a rather rapid descent from the pulley down the side of
-the building. In the vicinity of the third floor, I met the barrel coming up. This
-accounts for the two fractured ankles and the laceration of my legs and lower body.
+				   <p>Devoid of the weight of the bricks, the barrel now weighed approximately 30 kg. I refer you again to my weight of 75 kg in block #11. As you could imagine, still holding the rope, I began a rather rapid descent from the pulley down the side of the building. In the vicinity of the third floor, I met the barrel coming up. This accounts for the two fractured ankles and the laceration of my legs and lower body.</p>
 
-The encounter with the barrel slowed me enough to lessen my impact with the
-brick-strewn ground below. I am sorry to report, however, that as I lay there on
-the bricks in considerable pain, unable to stand or move and watching the empty
-barrel six stories above me, I again lost my presence of mind and unfortunately let
-go of the rope, causing the barrel to begin a
-endtranslNTCOM626</pre>
+				   <p>The encounter with the barrel slowed me enough to lessen my impact with the brick-strewn ground below. I am sorry to report, however, that as I lay there on the bricks in considerable pain, unable to stand or move and watching the empty barrel six stories above me, I again lost my presence of mind and unfortunately let go of the rope, causing the barrel to begin a<br/>endtranslNTCOM626</p>
+
+			
+			   </div>
 			</div>
 		</div>
 	<script>
