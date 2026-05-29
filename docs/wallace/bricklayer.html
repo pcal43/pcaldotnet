@@ -124,6 +124,8 @@
 			height: 100%;
 			max-height: calc(80vh - 48px); /* 24px top + 24px bottom padding for CRT border */
 			/* visually shortens the scrollbar so it doesn't overlap the rounded corners */
+			padding-right: 16px;
+			-webkit-overflow-scrolling: touch;
 		}
 		.crt-scroll::-webkit-scrollbar {
 			width: 16px;
@@ -146,7 +148,6 @@
 		.crt-scroll {
 			scrollbar-color: #00ff41 transparent;
 			scrollbar-width: thin;
-			padding-right: 16px;
 		}
 	</style>
 	<!-- Optional: Google Fonts VT323 for authentic CRT look -->
@@ -156,7 +157,7 @@
 	<div class="crt">
 		<div class="crt-scanlines"></div>
 		<div class="crt-scanband"></div>
-		<div class="crt-scroll">
+		<div class="crt-scroll" tabindex="0">
 			<div class="crt-content">
 				   <p>FROM INTERNAL INTERLACE-SYSTEM E-MAIL MEMO<br>
 				   CAH-NNE22-3575634-22, CLAIMS ADJUSTMENT HEADQUARTERS, STATE FARM INSURANCE COMPANIES, INC., BLOOMINGTON IL 26 JUNE<br>
@@ -197,6 +198,11 @@
 		setInterval(() => {
 			crt.style.opacity = 0.98 + Math.random() * 0.04;
 		}, 80);
+		// Focus the scroll area on page load for iOS scroll activation
+		window.addEventListener('DOMContentLoaded', () => {
+			const scrollArea = document.querySelector('.crt-scroll');
+			if (scrollArea) scrollArea.focus();
+		});
 	</script>
 </body>
 </html>
