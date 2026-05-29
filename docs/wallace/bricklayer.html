@@ -23,7 +23,27 @@
 			position: relative;
 			overflow: hidden;
 		}
+		/* Custom CRT scrollbar */
+		.crt::-webkit-scrollbar {
+			width: 16px;
+			background: #001a00;
+		}
+		.crt::-webkit-scrollbar-thumb {
+			background: #00ff41;
+			border-radius: 0;
+			min-height: 40px;
+		}
+		.crt::-webkit-scrollbar-track {
+			background: #001a00;
+			border-radius: 0;
+		}
+		.crt::-webkit-scrollbar-corner {
+			background: #001a00;
+		}
+		/* Firefox */
 		.crt {
+			scrollbar-color: #00ff41 #001a00;
+			scrollbar-width: thin;
 			width: auto;
 			min-width: unset;
 			max-width: unset;
